@@ -1,23 +1,22 @@
 import './App.css'
-import Form from './components/Form'
-import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
 
-function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
-  return (
-    <div>
-      Something went wrong
-      <p>{error instanceof Error ? error.message : 'Unknown Error'}</p>
-      <button onClick={resetErrorBoundary}>Try Again</button>
-    </div>
-  )
-}
+const allItems = [
+  { id: 'apple', value: 'apple' },
+  { id: 'orange', value: 'orange' },
+  { id: 'grape', value: 'grape' },
+  { id: 'pear', value: 'pear' },
+]
 
 function App() {
   return (
     <>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Form />
-      </ErrorBoundary>
+      <h1>Hello World</h1>
+      <h2>intro to rendering arrays</h2>
+      <ul>
+        {allItems.map((item) => (
+          <li key={item.id}>{item.value}</li>
+        ))}
+      </ul>
     </>
   )
 }
