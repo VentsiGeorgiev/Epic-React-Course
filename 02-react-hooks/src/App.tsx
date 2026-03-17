@@ -1,11 +1,6 @@
-import './App.css'
+import "./App.css";
+import Feature01 from "./01-feature";
 
-function App() {
-  return (
-    <>
-      <h1>Hello World</h1>
-    </>
-  )
+export default function App() {
+  return <Feature01 />;
 }
-
-export default App
