@@ -1,3 +1,15 @@
+.game {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .board {
   display: grid;
   margin-bottom: 2rem;
@@ -19,4 +31,42 @@
   height: 50px;
   border: 1px solid #000;
   font-size: 1.25rem;
+}
+
+.history {
+  min-width: 220px;
+  text-align: left;
+}
+
+.history-title {
+  margin: 0 0 0.75rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.history-button {
+  width: 100%;
+  text-align: left;
+}
+
+.history-button.active {
+  border-color: #646cff;
+}
+
+@media (max-width: 640px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .history {
+    min-width: 0;
+    width: 100%;
+  }
 }
